@@ -37,14 +37,20 @@ export default class JsonEditor extends Component {
     ReactDOM.findDOMNode(this.refs.leftInput).focus();
   }  
 
-  removeObject(e) {
-    e.preventDefault();
-
+  removeObject(obj) {
+    console.log(obj);
+    for (let i = 0; i < this.state.objs.length; i++) {
+      if (this.state.objs[i]._id === obj._id) {
+        this.state.objs.splice(i, 1);
+      }
+    }
+    this.forceUpdate();
+    this.props.handleCallback(this.state.objs);
   }
 
   renderObjects() {
     return this.state.objs.map((object) => (
-      <JsonObject key={object._id} obj={object} />
+      <JsonObject handleRemove={this.removeObject.bind(this)} key={object._id} obj={object} />
     ));
   }
 
@@ -64,7 +70,7 @@ export default class JsonEditor extends Component {
           <form className="inputForm" onSubmit={this.addObject.bind(this)}>
             <input type="text" ref="leftInput"></input>
             <input type="text" ref="rightInput"></input>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Add" />
           </form>
         </div>
         {this.renderObjects()}
