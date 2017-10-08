@@ -27,7 +27,6 @@ export default class JsonResult extends Component {
   }
 
   render() {
-    let result = this.renderResult();
     return (
       <div className="jsonResult">
         <button onClick={this.downloadFile.bind(this)}>Download</button>
