@@ -25,8 +25,10 @@ button:active {
 }
 
 .App {
+  height: 100%;
+  min-width: 920px;
+
   text-align: center;
-  height: 100vh;
 }
 
 .App-header {
@@ -56,11 +58,12 @@ button:active {
   display: flex;
   flex-direction: row;
 
-  min-height: 50%;
+  min-height: 650px;
 }
 
 .leftContainer {
   padding: 10px;
+
   width: 50%;
 
   background-color: gray;
@@ -84,11 +87,17 @@ button:active {
 }
 
 .textArea {
-  padding: 5px;
-  border-radius: 5px;
   box-sizing: border-box;
+
+  border-radius: 5px;
+  padding: 5px;
+
+  max-height: 600px;
+
   text-align: left;
   background-color: white;
+
+  overflow: scroll;
 }
 
 .textArea code {

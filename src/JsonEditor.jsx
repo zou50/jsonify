@@ -63,17 +63,21 @@ export default class JsonEditor extends Component {
   render() {
     return (
       <div className="editor">
-        <button className="addJsonObjectButton" onClick={this.showInput.bind(this)}>
-        Add JSON Object
-        </button>
-        <div style={{display: this.state.showInput === true ? 'block' : 'none'}}>
-          <form className="inputForm" onSubmit={this.addObject.bind(this)}>
-            <input type="text" ref="leftInput"></input>
-            <input type="text" ref="rightInput"></input>
-            <input type="submit" value="Add" />
-          </form>
+        <div className="editorTop">
+          <button className="addJsonObjectButton" onClick={this.showInput.bind(this)}>
+          Add JSON Object
+          </button>
+          <div style={{display: this.state.showInput === true ? 'block' : 'none'}}>
+            <form className="inputForm" onSubmit={this.addObject.bind(this)}>
+              <input type="text" ref="leftInput"></input>
+              <input type="text" ref="rightInput"></input>
+              <input type="submit" value="Add" />
+            </form>
+          </div>
         </div>
-        {this.renderObjects()}
+        <div className="objectList">
+          {this.renderObjects()}
+        </div>
       </div>
     );
   }

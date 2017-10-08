@@ -1,6 +1,6 @@
 .editor {
     border-radius: 10px;
-    padding: 10px;
+    padding: 0px 10px;
     margin: 15px auto;
 
     width: 90%;
@@ -13,6 +13,12 @@
     margin-bottom: 10px;
 
     width: 100%;
+}
+
+.editorTop {
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .inputForm {
@@ -46,3 +52,13 @@
 .inputForm input[type=submit]:active {
     transform: scale(0.9);
 }
+
+.objectList {
+    max-height: 500px;
+
+    overflow: scroll;
+}
+
+
+
+
