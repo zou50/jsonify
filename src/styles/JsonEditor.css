@@ -1,0 +1,48 @@
+.editor {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px auto;
+
+    width: 90%;
+
+    background: white;
+}
+
+.editor button {
+    margin-top: 4px;
+    margin-bottom: 10px;
+
+    width: 100%;
+}
+
+.inputForm {
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 2px;
+
+    background: lightgray;
+}
+
+.inputForm input {
+    border: none;
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.inputForm input[type=submit] {
+    border-radius: 10px;
+
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s ease-out;
+}
+
+.inputForm input[type=submit]:hover {
+    background: gray;
+}
+
+.inputForm input[type=submit]:active {
+    transform: scale(0.9);
+}

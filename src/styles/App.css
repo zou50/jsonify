@@ -1,0 +1,97 @@
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway-Light.ttf);
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  transition: 0.05s ease-out;
+  outline: none;
+}
+
+button:hover {
+  background-color: darkgrey;
+}
+
+button:active {
+  transform: scale(0.9);
+  transform: translateY(4px);
+  box-shadow: 0 5px #999;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.App-header {
+  font-family: RaleWay;
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.App-header h2 {
+  margin: 15px auto;
+}
+
+.desc {
+  margin: 0;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0;
+  color: lightgray;
+  font-size: 15px;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: row;
+
+  min-height: 50%;
+}
+
+.leftContainer {
+  padding: 10px;
+  width: 50%;
+
+  background-color: gray;
+}
+
+.rightContainer {
+  padding: 10px;
+  width: 50%;
+
+  background-color: lightgray;
+}
+
+.rightContainer code {
+  font-size: 20px;
+}
+
+.rightContainer button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.textArea {
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: white;
+}
+
+.textArea code {
+  font-size: initial;
+}
+
